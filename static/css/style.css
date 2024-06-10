@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* custom properties */
+:root {
+    --white: #FFFFFF;
+    --black: #111111;
+    --gray: #eceeef;
+    ;
+    --fontPrimary: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fontPrimary);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    margin: 1rem 0 4rem 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 5.8rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.header {
+    min-height: 30rem;
+    /*  background image color */
+    background-image: linear-gradient(rgb(0, 0, 0, .6), rgb(0, 0, 0, .6)), url(../img/machine-learning-1-1.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 5rem 0;
+    position: relative;
+    object-position: center;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    height: calc(30rem - 4rem);
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.name-site {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    .name-site {
+        font-size: 5rem;
+    }
+}
+
+.name-site span {
+    font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        align-items: flex-end;
+    }
+
+}
+
+.tel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.header a,
+.footer a {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.navegation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegation {
+        flex-direction: row;
+    }
+
+}
+
+.navegation a {
+    color: var(--white);
+    font-size: 2rem;
+    padding: .5rem;
+    transition: background-color .3s;
+}
+
+@media (min-width: 768px) {
+    .navegation a {
+        padding: 1rem 2rem;
+
+    }
+}
+
+.navegation a:hover {
+    background-color: rgb(255 255 255 / .5);
+}
+
+.slogan {
+    text-align: center;
+}
+
+
+.content-main {
+    background-color: var(--gray);
+    margin-top: -5rem;
+    position: relative;
+    padding: 5rem;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 10%);
+}
+
+.form p {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.btn {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    background-color: var(--gray);
+}

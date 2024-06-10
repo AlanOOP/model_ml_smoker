@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Smoker</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css' )}}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/normalize.css' )}}>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-l from-blue-900 to-slate-700">
+    <header class="header">
+        <div class="container content-header">
+            <div class="barra">
+                <div class="logo">
+                    <h1 class="name-site">
+                        Model<span>Smoker</span>
+                    </h1>
+                </div>
+                <div class="contact">
+                    <p class="tel">Alan Alexis Hernandez Francisco</p>
+                </div>
+            </div>
+            <div class="slogan">
+
+                <h1 class="mb-5 font-bold text-3xl">
+                    Modelo Predictivo para la Detección de Cáncer
+                </h1>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container content-main bg-gray-200 shadow-sm">
+            <div>
+                <form id="predictionForm" class="form max-w-5xl mx-auto" novalidate>
+                    <p class="text-slate-700">
+                        Llene el formulario
+                    </p>
+
+                    <div class="form-group form-group--select mt-5">
+                        <label for="select" class="font-bold text-slate-700 pb-2">GATA4:</label>
+                        <input type="number" id="GATA4"
+                            class="w-full py-3 border border-slate-200 bg-slate-50 rounded-lg px-3 focus:outline-none">
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="input" class="font-bold text-slate-700 pb-2">Gene1689:</label>
+                        <input type="number" id="Gene1689"
+                            class="w-full py-3 border border-slate-200 bg-slate-50 rounded-lg px-3 focus:outline-none">
+                    </div>
+                    <input type="submit" value="Enviar"
+                        class="w-full py-3 font-medium text-white bg-blue-800 hover:bg-blue-900 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center mt-10 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer" />
+
+                </form>
+            </div>
+
+        </div>
+        <section class="container mt-5">
+            <div class="flex justify-center" id="result">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
